@@ -1,6 +1,10 @@
-# Stock Market Simulator
+# Stock Market Simulator — Software Engineering Course Project
 
-Developing and upgrading my first year university object-oriented programming project.
+This repository is a fork of an existing Java stock market simulator, used as the starting point for an end-of-semester software engineering project. The original application was developed by [12iyad](https://github.com/12iyad), as recorded in the repository's Git history.
+
+The purpose of this fork is to improve the existing codebase using the practices taught in the course. Planned work includes refactoring, SOLID principles, appropriate design patterns, automated testing, and CI/CD. The scope will evolve as additional topics are covered during the semester.
+
+Work completed so far includes Ubuntu compatibility while retaining Windows support, and Git ignore rules for generated files and local IDE configuration.
 
 ## Requirements
 
@@ -24,7 +28,7 @@ javac -d build *.java
 java -cp build StockMarketSimulator
 ```
 
-Recompile after changing the source code. The explicit classpath uses your fresh build instead of the precompiled `.class` files included in the original repository.
+Recompile after changing the source code. The explicit classpath runs the fresh build and keeps generated `.class` files separate from source files.
 
 Enter a username and starting balance, then use the numbered menus. Press **Ctrl+C** to stop the simulator.
 
