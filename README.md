@@ -1,10 +1,38 @@
 # Stock Market Simulator
-Developing and upgrading my first year university object-orientated programming project.
->This program will only work on windows command line due to my unique way of clearing the screen through CLS (for clear screen)
-# To run this program
->Assuming you have all the Java essentials to run Java code on terminal and added the correct PATH
-1. Download all the files from the git repository
-2. Navigate to the folder that contains all the files from the repository on Windows Command Line
-3. run `java StockMarketSimulator.java`
 
-DISCLAIMER: This is still a developing project so expect some bugs but feel free to test the bugs and let me know :)
+Developing and upgrading my first year university object-oriented programming project.
+
+## Requirements
+
+- Ubuntu or Windows with a Java Development Kit (JDK 8 or newer).
+- Both `java` and `javac` available on your `PATH`.
+
+## Compile and run
+
+Open a terminal on Ubuntu, or Command Prompt / PowerShell on Windows, and navigate to the cloned repository.
+
+Create a build directory once:
+
+```sh
+mkdir build
+```
+
+Compile all Java sources, then start the simulator (the commands are the same on both platforms):
+
+```sh
+javac -d build *.java
+java -cp build StockMarketSimulator
+```
+
+Recompile after changing the source code. The explicit classpath uses your fresh build instead of the precompiled `.class` files included in the original repository.
+
+Enter a username and starting balance, then use the numbered menus. Press **Ctrl+C** to stop the simulator.
+
+## Terminal compatibility
+
+- **Windows:** screen clearing uses the built-in `cmd /c cls` command.
+- **Ubuntu:** screen clearing uses ANSI escape sequences in a terminal such as GNOME Terminal; no external `clear` command is needed.
+- When Java has no interactive console (for example, redirected output or an IDE output pane), screen clearing is skipped. On Ubuntu it is also skipped when `TERM` is unset or `dumb`.
+- If the Windows clear command is unavailable, the simulator continues without clearing the screen.
+
+This is still a developing project, so bugs may remain.

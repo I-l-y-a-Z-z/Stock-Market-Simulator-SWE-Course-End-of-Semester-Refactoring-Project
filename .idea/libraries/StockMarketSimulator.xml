@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="StockMarketSimulator">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/StockMarketSimulator.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -12,11 +12,25 @@ public class StockMarketSimulator
     }
     
    public static void cls(){
-        try{
-            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        // Redirected output and IDE consoles should not receive clear-screen commands.
+        if (System.console() == null) {
+            return;
         }
-        catch (Exception e){
-            System.out.println(e);
+
+        if (System.getProperty("os.name", "").startsWith("Windows")) {
+            try {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } catch (IOException e) {
+                // Clearing is optional; keep the simulator usable if cmd is unavailable.
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        } else {
+            String terminal = System.getenv("TERM");
+            if (terminal != null && !terminal.equalsIgnoreCase("dumb")) {
+                System.out.print("\033[H\033[2J");
+                System.out.flush();
+            }
         }
    }
 

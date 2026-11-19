@@ -1,0 +1,29 @@
+# Java bytecode and build output
+*.class
+/build/
+/out/
+/target/
+.gradle/
+
+# IntelliJ IDEA local project configuration
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Logs and JVM crash / heap dumps
+*.log
+hs_err_pid*
+replay_pid*
+*.hprof
+
+# Editor temporary files
+*.swp
+*.swo
+*~
+
+# Ubuntu / Windows / macOS desktop metadata
+.directory
+Thumbs.db
+Desktop.ini
+.DS_Store
